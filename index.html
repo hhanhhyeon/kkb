@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('07430266347d6ca9b970b3ad200d218b');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '강원특별자치도장애인종합복지관 모바일 후원신청페이지',
+        description: '아래 버튼을 누르면 후원신청 페이지로 이동합니다.',
+        imageUrl:
+          'https://survey-phinf.pstatic.net/MjAyNDAxMDlfMzcg/MDAxNzA0Nzc1NTg3OTQx.NqZoy3f13GjMF9UYtADMTKtw1_CjrCayv1rmaORHM1sg.wVDsfxyVg8jAqxyW2OPw3im9tio9hTnjU9T_S-M6-Fkg.JPEG/20240109134627930-793435-ada1cdda.jpg?type=w800',
+        link: {
+          mobileWebUrl: 'https://naver.me/GB5KN9gf',
+          webUrl: 'https://naver.me/GB5KN9gf',
+        },
+      },
+      social: {
+        likeCount: 1004, //99999가 최대입니다
+        commentCount: 1004, //99999가 최대입니다
+        sharedCount: 1004, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '후원 신청하러 가기',
+          link: {
+            mobileWebUrl: 'https://naver.me/GB5KN9gf',
+            webUrl: 'https://naver.me/GB5KN9gf',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
